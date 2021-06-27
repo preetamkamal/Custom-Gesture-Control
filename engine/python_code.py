@@ -256,11 +256,11 @@ function_dic={"page_up":page_up,"page_down":page_down,"left_click":left_click,"r
 
 custom_gesture={}
 for i in range(1,len(sys.argv)):
-    custom_gesture[str(i)]=function_dic[sys.argv[i]]
+    custom_gesture[str(i-1)]=function_dic[sys.argv[i]]
 print("custom_gesture =",custom_gesture, 'args=', sys.argv)
 # print("heelo")
 # custom_gesture={"10":page_up,"11":page_down,"0":right_click}
-# custom_gesture[sys.argv[1]]=function_dic[sys.argv[2]]
+# custom_gesture["10"]=function_dic[sys.argv[1]]
 
 
 
