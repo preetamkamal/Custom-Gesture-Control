@@ -31,7 +31,19 @@ function get_weather() {
 
   var options = {
     scriptPath: path.join(__dirname, "/../engine/"),
-    args: [gesture1, gesture2, gesture3, gesture4, gesture5, gesture6, gesture7, gesture8, gesture9, gesture10, gesture11],
+    args: [
+      gesture1,
+      gesture2,
+      gesture3,
+      gesture4,
+      gesture5,
+      gesture6,
+      gesture7,
+      gesture8,
+      gesture9,
+      gesture10,
+      gesture11,
+    ],
     // pythonPath: "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
   };
 
