@@ -1,6 +1,7 @@
 let { PythonShell } = require("python-shell");
 let path = require("path");
 let gestureSetId = "def";
+// const dialog = require('electron').dialog;
 function get_gesture_input() {
   let gesture0 = document.getElementById("element0").value;
   let gesture1 = document.getElementById("element1").value;
@@ -277,3 +278,112 @@ function read_from_firebase() {
 function updateText(val) {
   gestureSetId = val;
 }
+
+// -------------- DOWNLOAD JSON ---------------
+function downloadFile() {
+
+    let gesture0 = document.getElementById("element0").value;
+    let gesture1 = document.getElementById("element1").value;
+    let gesture2 = document.getElementById("element2").value;
+    let gesture3 = document.getElementById("element3").value;
+    let gesture4 = document.getElementById("element4").value;
+    let gesture5 = document.getElementById("element5").value;
+    let gesture6 = document.getElementById("element6").value;
+    let gesture7 = document.getElementById("element7").value;
+    let gesture8 = document.getElementById("element8").value;
+    let gesture9 = document.getElementById("element9").value;
+    let gesture10 = document.getElementById("element10").value;
+    let gesture11 = document.getElementById("element11").value;
+  let UnConvertedContent = {
+    gesture0: gesture0,
+    gesture1: gesture1,
+    gesture2: gesture2,
+    gesture3: gesture3,
+    gesture4: gesture4,
+    gesture5: gesture5,
+    gesture6: gesture6,
+    gesture7: gesture7,
+    gesture8: gesture8,
+    gesture9: gesture9,
+    gesture10: gesture10,
+    gesture11: gesture11,
+    gestureSetId: gestureSetId,
+  };
+  let content = JSON.stringify(UnConvertedContent);
+
+  let fileName = "gesture_backup.json";
+  let contentType = "application/json";
+  var a = document.createElement("a");
+  var file = new Blob([content], { type: contentType });
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
+}
+
+// ------- IMPORT ----------
+function readTextFile(file, callback) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.overrideMimeType("application/json");
+  rawFile.open("GET", file, true);
+  rawFile.onreadystatechange = function () {
+    if (rawFile.readyState === 4 && rawFile.status == "200") {
+      callback(rawFile.responseText);
+    }
+  };
+  rawFile.send(null);
+}
+
+
+document.getElementById("file-upload").onchange = function () {
+
+  let filePath = document.getElementById("file-upload").files[0].path;
+  
+  readTextFile(filePath, function (text) {
+    var data = JSON.parse(text);
+    // console.log(data);
+     let gesture0Entity = document.getElementById("element0");
+     let gesture1Entity = document.getElementById("element1");
+     let gesture2Entity = document.getElementById("element2");
+     let gesture3Entity = document.getElementById("element3");
+     let gesture4Entity = document.getElementById("element4");
+     let gesture5Entity = document.getElementById("element5");
+     let gesture6Entity = document.getElementById("element6");
+     let gesture7Entity = document.getElementById("element7");
+     let gesture8Entity = document.getElementById("element8");
+     let gesture9Entity = document.getElementById("element9");
+     let gesture10Entity = document.getElementById("element10");
+     let gesture11Entity = document.getElementById("element11");
+      let gestureId = document.getElementById("gesture-set-id");
+
+    let {
+      gesture0,
+      gesture1,
+      gesture2,
+      gesture3,
+      gesture4,
+      gesture5,
+      gesture6,
+      gesture7,
+      gesture8,
+      gesture9,
+      gesture10,
+      gesture11,
+      gestureSetId,
+    } = data;
+    // console.log(gesture0, gesture1, gesture2, gesture3, gesture4)
+    gesture0Entity.value = gesture0;
+    gesture1Entity.value = gesture1;
+    gesture2Entity.value = gesture2;
+    gesture3Entity.value = gesture3;
+    gesture4Entity.value = gesture4;
+    gesture5Entity.value = gesture5;
+    gesture6Entity.value = gesture6;
+    gesture7Entity.value = gesture7;
+    gesture8Entity.value = gesture8;
+    gesture9Entity.value = gesture9;
+    gesture10Entity.value =gesture10; 
+    gesture11Entity.value =gesture11;
+    gestureId.value = gestureSetId;
+  });
+};
+
