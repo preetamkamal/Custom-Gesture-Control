@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh;
+    background:linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass{
+    min-height: 80vh;
+    background: white;
+    width: 80%;
+    background:linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 5;
+    /* backdrop: none;
+     */
+     /* backdrop-filter: grayscale(0.5) opacity(0.8); */
+    /* backdrop-filter: blur(5rem); */
+    backdrop-filter: blur(0.5rem);
+}
+
+
+.circle1, .circle2{
+    background: white;
+    width: 10rem;
+    height: 10rem;
+    background:linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    /* background: red; */
+}
+
+.circle1{
+    top: 5%;
+    right: 5%;
+}
+
+.circle2{
+    bottom: 5%;
+    left: 20%;
+}
+
+.profile-pic{
+    max-width: 5rem;
+    min-width: 5rem;
+}
+
+.profile-picture-container{
+    width: 7rem;
+    height: 7rem;
+    /* background: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
