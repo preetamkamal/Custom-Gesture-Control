@@ -372,6 +372,8 @@ custom_gesture={}
 
 #custom_gesture={"27":page_up,"18":page_down,"4":take_screenshot,"5":print_page,"2":move_right}
 
+for i in range(1, len(sys.argv)):
+    custom_gesture[str(i-1)] = function_dic[sys.argv[i]]
 
 
 # In[23]:
