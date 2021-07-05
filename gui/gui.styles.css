@@ -3,10 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+    color: #3d5af1;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+h2,p {
+    color: #0e153aa9;
+    font-weight: 500;
+    opacity: 0.8;
+}
 
+h3{
+    color: #0e153ada;
+    font-weight: 600;
+     opacity: 0.8;
+}
 main{
+
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background:linear-gradient(to right top, #65dfc9, #6cdbeb);
+    /* background:linear-gradient(to right top, #65dfc9, #6cdbeb); */
+    background:linear-gradient(to right top, #e2f3f5, #22d1ee);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +43,7 @@ main{
      /* backdrop-filter: grayscale(0.5) opacity(0.8); */
     /* backdrop-filter: blur(5rem); */
     backdrop-filter: blur(0.5rem);
+    display: flex;
 }
 
 
@@ -61,4 +81,129 @@ main{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+
+.dashboard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background:linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border-radius: 2rem;
+}
+
+.gestures {
+    flex: 3;
+}
+
+.link{
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.link:hover{
+    background:linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.5));
+}
+
+.link h2{
+    padding: 0rem 1.5rem;
+}
+
+.link img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+
+.pro-container{
+}
+
+.pro{
+    
+    background:linear-gradient(to right top, #3d5af1, #22d1ee);
+    border-radius: 2rem;
+    color: #e2f3f5;
+    padding: 1rem;
+    display: flex;
+    min-width: 12rem;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.pro h2{
+    margin-left: 1.5rem;
+    font-weight: 600;
+    color: #cefff1;
+}
+
+.pro:hover, .pro2:hover{
+    opacity: 0.8;
+}
+/* Gestures section */
+.status{
+    margin-Bottom: 3rem;
+    margin-top: 3rem;
+}
+.status h1{
+    margin-bottom: 1rem;
+}
+.status input{
+    background:linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border: none;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    height: 3rem;
+    /* margin-top: 2rem; */
+    flex: 3;
+}
+
+.gestures{
+    margin-left: 5rem;
+}
+
+.input-data{
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.pro2{
+
+    background:linear-gradient(to right top, #3d5af1, #22d1ee);
+    border-radius: 2rem;
+    color: #e2f3f5;
+    padding-left:  1rem;
+    padding-right: 1rem;
+    display: flex;
+    min-width: 7rem;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 1rem; */
+    cursor: pointer;
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.pro2 h2{
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #cefff1;
+}
+
+.pro-upload{
+    margin-right: 3rem;
+}
+
+input[type=file] {
+  display: none;
 }

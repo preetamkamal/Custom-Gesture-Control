@@ -73,7 +73,7 @@ function get_gesture_input() {
     document.getElementById("element11").disabled = false;
     document.getElementById("submit-button").disabled = false;
   });
-  console.log('Hi')
+  // console.log('Hi')
   pyshell.end(function (err, code, signal) {
     if (err) throw err;
     // console.log("The exit code was: " + code);
@@ -153,7 +153,8 @@ function Add_Doc_WithID() {
 
   // --- ADD CUSOM ID
   cloudDB
-    .collection("gestures").doc(gestureSetId)
+    .collection("gestures")
+    .doc(gestureSetId)
     .set({
       gesture0: gesture0,
       gesture1: gesture1,
@@ -169,8 +170,8 @@ function Add_Doc_WithID() {
       gesture11: gesture11,
       id: gestureSetId,
     })
-    .then(function (docRef) {
-      console.log("Doc written with ID", docRef);
+    .then(function () {
+      console.log("Doc written with ID", gestureSetId);
     })
     .catch(function (err) {
       console.log("error found at 131", err);

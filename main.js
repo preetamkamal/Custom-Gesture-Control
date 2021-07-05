@@ -10,26 +10,51 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+let splash
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    // width: 800,
+    // height: 600,
+    width: 1920,
+    height: 1080,
+    show: false, // don't show the main window
     webPreferences: { experimentalFeatures: true },
   });
 
+  splash = new BrowserWindow({
+    width: 800,
+    height: 450,
+    transparent: true,
+    frame: false,
+    alwaysOnTop: true,
+  });
+  splash.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "/gui/splash-screen.html"),
+      protocol: "file:",
+      slashes: true,
+    })
+  );
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, '/gui/gui.html'),
     protocol: 'file:',
     slashes: true
-  }))
+  }));
+  
+  mainWindow.once("ready-to-show", () => {
+    setTimeout(function () {
+      splash.destroy();
+      mainWindow.show();
+    }, 2200);
+  });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
+  
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
