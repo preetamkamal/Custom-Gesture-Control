@@ -21,7 +21,7 @@ from matplotlib import pyplot as plt
 
 
 # # LEFT HAND  <br>
-# index  down   0  <br>
+# index_down   0  <br>
 # middle_down   1  <br>
 # ring_down     2  <br>
 # pinky_down    3  <br> 
