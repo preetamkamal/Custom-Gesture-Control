@@ -361,10 +361,11 @@ input[type=file] {
   width: 80px;
   height: 80px;
   position: absolute;
-  bottom: 100%;
+  bottom: 98%;
   right: 0;      
   z-index: 1;
 }
+
 
 .card__arc path {
   fill: var(--surface-color);
@@ -440,7 +441,6 @@ input[type=file] {
 .run-app{
     width: 6rem;
     height: 6rem;
-    background:#3d5bf1c0;
     border-radius: 50%;
     position: absolute;
     z-index: 20;
@@ -450,6 +450,10 @@ input[type=file] {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background:linear-gradient(to right top, #3d5af1, #22d1ee);
+    
+    color: #e2f3f5;
+    
 }
 
 .start-icon{

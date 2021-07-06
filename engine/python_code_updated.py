@@ -194,7 +194,7 @@ def new_window():
 def close_tab():
     pag.hotkey('ctrl', 'w')
 
-def close_all_tabs():
+def close_all_tab():
     pag.hotkey('ctrl', 'shift','w')
 
 def save():
@@ -362,7 +362,7 @@ function_dic={"page_up":page_up,"page_down":page_down,"left_click":left_click,"r
 "move_left":move_left,"move_right":move_right,"move_up":move_up,"move_down":move_down,
 "open_google":open_google,"take_screenshot":take_screenshot,"arrow_left":arrow_left,"arrow_right":arrow_right,"no_operation":no_operation,"copy":copy,"paste":paste,
  "zoom_in":zoom_in,"zoom_out":zoom_out,"next_tab":next_tab,"prev_tab":prev_tab,"new_tab":new_tab,"new_incognito_tab":new_incognito_tab,
-  "new_window":new_window,"close_tab":close_tab,"close_all_tabs":close_all_tabs,"save":save,"print_page":print_page,"history":history,"downloads" :downloads,
+  "new_window":new_window,"close_tab":close_tab,"close_all_tab":close_all_tab,"save":save,"print_page":print_page,"history":history,"downloads" :downloads,
     "reload_tab":reload_tab
              }
 
