@@ -23,8 +23,8 @@ function createWindow () {
   });
 
   splash = new BrowserWindow({
-    width: 800,
-    height: 450,
+    width: 1920,
+    height: 1080,
     transparent: true,
     frame: false,
     alwaysOnTop: true,

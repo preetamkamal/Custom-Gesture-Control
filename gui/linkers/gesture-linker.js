@@ -33,7 +33,7 @@ let gesture25 = document.getElementById("element25").value;
 let gesture26 = document.getElementById("element26").value;
 let gesture27 = document.getElementById("element27").value;
   
-  connectionStatus.innerHTML = "Connected 😇 ";
+  connectionStatus.innerHTML = "🟢 Connected";
 document.getElementById("element0").disabled = true;
 document.getElementById("element1").disabled = true;
 document.getElementById("element2").disabled = true;
@@ -137,7 +137,7 @@ document.getElementById("element27").disabled = true;
     document.getElementById("element26").disabled = false;
     document.getElementById("element27").disabled = false;
     document.getElementById("submit-button").disabled = false;
-    connectionStatus.innerHTML = "Disconnected 🙁 ";
+    connectionStatus.innerHTML = "🔴 Disconnected";
   });
   // console.log('Hi')
   pyshell.end(function (err, code, signal) {

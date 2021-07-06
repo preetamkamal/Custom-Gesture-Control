@@ -9,3 +9,8 @@ body{
     justify-content: center;
     overflow: hidden;
 }
+
+img{
+    width: 40vw;
+    height: 40vw;
+}
